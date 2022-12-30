@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "Z:/Desktop/Weber State Univesity/Classes/CS 2420/Assignments/04 Learning Activity Maze Solver/cmake-build-debug",
-		"source" : "Z:/Desktop/Weber State Univesity/Classes/CS 2420/Assignments/04 Learning Activity Maze Solver"
+		"build" : "D:/Desktop/Weber State/04 Learning Activity - Maze Solver/04-Learning-Activity-Maze-Solver/cmake-build-debug",
+		"source" : "D:/Desktop/Weber State/04 Learning Activity - Maze Solver/04-Learning-Activity-Maze-Solver"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 4
 	}
 }

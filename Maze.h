@@ -4,18 +4,53 @@
 class Maze{
 public:
     void solve(){
+        if(solve(startRow, startCol)){
+            std::cout << "Success" << std::endl;
+        }
+        else{
+            std::cout << "No Solution" << std::endl;
+        }
     }
 //Recursive method to solve the maze
     bool solve(int currR, int currC){
+        //Base case
+        if(currR == endRow && currC == endCol){
+            return true;
+        }
+        //Base case
+        if(!isEmpty(currR, currC)){
+            return false;
+        }
+        maze[currR][currC] = '+';
+        //Recursive case
+        if(solve(currR +1, currC) || solve(currR-1, currC) ||
+           solve(currR, currC + 1) || solve(currR, currC-1)){
+            return true;
+        }
+        else{
+            maze[currR][currC] = S;
+            return false;
+        }
         return false;
     }
 // print the current state of the maze
     void printMaze()
     {
+        for(int r = 0; r < HEIGHT; r++){
+            for(int c = 0; c < WIDTH; c++){
+                std::cout << maze[r][c];
+            }
+            std::cout << std::endl;
+        }
     }
 //Determines if a location in the maze is empty
     bool isEmpty(int r, int c){
-        return true;
+        if(r >=0 && c >= 0 && r < HEIGHT && c < WIDTH){
+            if(maze[r][c] == S){
+                return true;
+            }
+        }
+        return false;
     }
 private:
     int startRow = 2;
